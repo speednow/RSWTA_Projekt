@@ -18,14 +18,13 @@ class Firma(models.Model):
 
 
 class Oferta(models.Model):
-    firma = models.ForeignKey(Firma, on_delete=models.CASCADE, default='SOME_FIRMA')
     branza = models.CharField(max_length=200)
     lokalizacja = models.CharField(max_length=100)
-    wakat = models.CharField(max_length=100)
-    wynagrodzenie = models.FloatField()
-    opis = models.TextField()
-    wiek_dol = models.SmallIntegerField(default=18)
-    wiek_gora = models.SmallIntegerField(default=30)
+    wakat = models.CharField(max_length=100, blank = True)
+    wynagrodzenie = models.FloatField(default=0, blank=True)
+    opis = models.CharField(max_length=1000)
+    wiek_dol = models.IntegerField(default=18)
+    wiek_gora = models.IntegerField(default=30)
     data_utworzenia = models.DateTimeField(
             default=timezone.now)
 
@@ -35,3 +34,4 @@ class Oferta(models.Model):
 
     def __str__(self):
         return self.nazwa_firmy
+

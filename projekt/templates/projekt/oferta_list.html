@@ -6,7 +6,16 @@
 
 </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <p><h1>RSWTA-Projekt</h1></p>
+
+    <table>
+        {% for o in oferta %}
+    <tr>
+        <td> <p><b>{{ o.wakat }}</b> </td>
+        <td>{{ o.lokalizacja }} </td>
+        <td>{{ o.data_utworzenia.date }}</td>
+    </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

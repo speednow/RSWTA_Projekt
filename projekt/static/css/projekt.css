@@ -1,0 +1,67 @@
+a{
+    color:#5db455;
+}
+
+a:hover{
+    color:#5db455;
+}
+
+td {
+    color: #5db455;
+}
+
+.div_hover:hover{
+ background-color: #5eff5e;
+}
+
+body {
+    padding-left: 15px;
+}
+
+.page-header{
+    color: #026400;
+    font-family: 'Jua';
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.menu{
+    float: left;
+    width:200px;
+    height:320px;
+    background-color: #B2FFB2;
+
+}
+
+.table-content{
+    font-size:18px;
+    padding 10px:
+}
+
+.content_title{
+    text-align:center;
+}
+
+.option{
+    min-width:50px
+    height:25px;
+    font-size:18px;
+    padding:10px;
+}

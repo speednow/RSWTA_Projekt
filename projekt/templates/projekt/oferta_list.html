@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>RSWTA-Projekt</title>
+{% extends 'projekt/base.html' %}
 
-</head>
-<body>
-    <p><h1>RSWTA-Projekt</h1></p>
-
+{% block content %}
+    <div class="content_title">
+        Oferty
+    </div>
     <table>
+        <tr>
+            <th>Wakat</th>
+            <th>Lokalizacja</th>
+            <th>Zarobki</th>
+            <th>Data utworzenia</th>
+        </tr>
         {% for o in oferta %}
-    <tr>
-        <td> <p><b>{{ o.wakat }}</b> </td>
-        <td>{{ o.lokalizacja }} </td>
-        <td>{{ o.data_utworzenia.date }}</td>
-    </tr>
+        <tr class="div_hover">
+            <td><a href="{% url 'oferta_detail' pk=o.pk %}">{{ o.wakat }}</a> </td>
+            <td>{{ o.lokalizacja }} </td>
+            <td> {{o.wynagrodzenie }}</td>
+            <td>{{ o.data_utworzenia.date }}</td>
+        </tr>
         {% endfor %}
     </table>
-</body>
-</html>
+{% endblock %}
